@@ -26,4 +26,9 @@ public class DoubleRing implements Ring<Double> {
         }
         return x * y;
     }
+
+    @Override
+    public Double negate(Double x) {
+        return x * -1.0;
+    }
 }

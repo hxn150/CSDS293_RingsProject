@@ -33,5 +33,10 @@ public class BigIntegerRing implements Ring<BigInteger> {
         return x.multiply(y);
     }
 
+    @Override
+    public BigInteger negate(BigInteger x) {
+        return x.negate();
+    }
+
 
 }

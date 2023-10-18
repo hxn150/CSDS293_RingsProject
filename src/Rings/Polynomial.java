@@ -1,9 +1,8 @@
 package Rings;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
+import java.util.stream.Collectors;
+
 public final class Polynomial<T> {
     private final List<T> coefficients;
     public Polynomial(List<T> coefficients) {
@@ -12,6 +11,10 @@ public final class Polynomial<T> {
 
     public static final <S> Polynomial<S> from(List<S> coefficients) {
         return new Polynomial<>(List.copyOf(coefficients));
+    }
+
+    public List<T> getList(){
+        return coefficients.stream().collect(Collectors.toList());
     }
 
     @Override
@@ -48,7 +51,17 @@ public final class Polynomial<T> {
                 resultCoefficients.set(i + j, newSum);
             }
         }
-
         return new Polynomial<>(resultCoefficients);
     }
+//
+//    public Polynomial<T> negate(Ring<T> ring) {
+//        Objects.requireNonNull(ring);
+//
+//        List<T> negatedCoefficients = coefficients.stream()
+//                .map(ring::negate) // Negate each coefficient using the ring's negate method
+//                .collect(Collectors.toList());
+//
+//        return new Polynomial<>(negatedCoefficients);
+//    }
+
 }

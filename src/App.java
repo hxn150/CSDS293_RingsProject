@@ -1,12 +1,3 @@
-import Matrix.MatrixMap;
-import Rings.IntegerRing;
-import Indexes.Indexes;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.function.BinaryOperator;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 public class App {
 //    public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);

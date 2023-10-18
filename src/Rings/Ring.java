@@ -6,4 +6,5 @@ public interface Ring<T> {
     T identity();
     T sum(T x, T y);
     T product(T x, T y);
+    T negate(T x);
 }

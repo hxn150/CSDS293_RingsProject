@@ -70,5 +70,4 @@ public class Polynomial<T> implements Iterable<T>{
 
         return new Polynomial<>(resultCoefficients);
     }
-
 }

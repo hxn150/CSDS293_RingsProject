@@ -27,4 +27,9 @@ public class IntegerRing implements Ring<Integer> {
         }
         return x * y;
     }
+
+    @Override
+    public Integer negate(Integer x) {
+        return x * -1;
+    }
 }
