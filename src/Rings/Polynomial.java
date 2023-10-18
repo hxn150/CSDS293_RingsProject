@@ -53,15 +53,4 @@ public final class Polynomial<T> {
         }
         return new Polynomial<>(resultCoefficients);
     }
-//
-//    public Polynomial<T> negate(Ring<T> ring) {
-//        Objects.requireNonNull(ring);
-//
-//        List<T> negatedCoefficients = coefficients.stream()
-//                .map(ring::negate) // Negate each coefficient using the ring's negate method
-//                .collect(Collectors.toList());
-//
-//        return new Polynomial<>(negatedCoefficients);
-//    }
-
 }
