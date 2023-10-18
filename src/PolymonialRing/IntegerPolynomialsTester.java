@@ -1,13 +1,11 @@
 package PolymonialRing;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import PolymonialRing.Polynomial;
-import PolymonialRing.PolynomialRing;
 import Rings.IntegerRing;
 import Rings.Ring;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class IntegerPolynomialsTester {
     Ring<Integer> innerRing = new IntegerRing();

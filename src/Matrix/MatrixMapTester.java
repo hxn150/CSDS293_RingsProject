@@ -5,16 +5,14 @@ import Rings.BigIntegerRing;
 import Rings.IntegerRing;
 import Rings.Polynomial;
 import Rings.Ring;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.*;
+
 
 public class MatrixMapTester {
     @Test

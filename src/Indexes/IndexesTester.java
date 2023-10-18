@@ -1,12 +1,13 @@
 package Indexes;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class IndexesTester {
     private final Indexes createIndexes(int row, int col) {
@@ -81,7 +82,7 @@ public class IndexesTester {
 
         // Test value() method
         Indexes indexes = new Indexes(1, 2);
-        assertEquals(6, indexes.value(matrix));
+        assertEquals(Optional.of(6), indexes.value(matrix));
 
         // Test value() method with different matrix
         indexes = new Indexes(2, 3);
