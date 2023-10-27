@@ -20,7 +20,7 @@ public class BigIntegerRing implements Ring<BigInteger> {
     @Override
     public BigInteger sum(BigInteger x, BigInteger y) {
         if(x == null || y == null){
-            throw new IllegalArgumentException("Inputs are null");
+            throw new NullPointerException();
         }
         return x.add(y);
     }
@@ -28,7 +28,7 @@ public class BigIntegerRing implements Ring<BigInteger> {
     @Override
     public BigInteger product(BigInteger x, BigInteger y) {
         if(x == null || y == null){
-            throw new IllegalArgumentException("Inputs are null");
+            throw new NullPointerException();
         }
         return x.multiply(y);
     }

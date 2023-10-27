@@ -25,7 +25,7 @@
     <!-- TODO: if this project specifies a main class, replace "HelloWorld" with that main class (otherwise, you can ignore this) -->
     <!-- <property name="main-class" value="${ant.project.name}.HelloWorld"/> -->
 
-    <!--   Additional jar that may be needed for properly runnign junit -->
+    <!--   Additional jar that may be needed for properly running junit -->
     <path id="hamcrest.classpath">
         <pathelement location="${ant.home}/lib/hamcrest-2.2.jar"/>
     </path>

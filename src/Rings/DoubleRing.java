@@ -14,7 +14,7 @@ public class DoubleRing implements Ring<Double> {
     @Override
     public Double sum(Double x, Double y) {
         if(x == null || y == null){
-            throw new IllegalArgumentException("Inputs are null");
+            throw new NullPointerException();
         }
         return x + y;
     }
@@ -22,7 +22,7 @@ public class DoubleRing implements Ring<Double> {
     @Override
     public Double product(Double x, Double y) {
         if(x == null || y == null){
-            throw new IllegalArgumentException("Inputs are null");
+            throw new NullPointerException();
         }
         return x * y;
     }

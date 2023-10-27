@@ -1,5 +1,3 @@
-package Interpolation;
-
 import Rings.Polynomial;
 import Rings.Ring;
 
@@ -21,6 +19,8 @@ public class InterpolationPolynomial<T> {
      * End Function
      *
      */
+    private InterpolationPolynomial() {
+    }
 
     public static <T> Polynomial<T> interpolate(List<T> dataPoints, Ring<T> ring) {
         Objects.requireNonNull(dataPoints);
