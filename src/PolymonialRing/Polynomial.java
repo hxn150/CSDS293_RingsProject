@@ -1,4 +1,5 @@
 package PolymonialRing;
+
 import Rings.Ring;
 
 import java.util.*;

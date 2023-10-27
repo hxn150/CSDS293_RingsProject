@@ -54,6 +54,4 @@ public class PolynomialRing<T> implements Ring<Polynomial<T>> {
 
         return (Polynomial<T>) negatedCoefficients;
     }
-
-
 }

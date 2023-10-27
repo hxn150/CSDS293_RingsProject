@@ -1,5 +1,5 @@
 <!-- TODO: change the name to the name of the project given in the assignment (such as "count") -->
-<project name="testexample" xmlns:jacoco="antlib:org.jacoco.ant">
+<project name="Rings" xmlns:jacoco="antlib:org.jacoco.ant">
 
     <!--   Directory with source files -->
     <property name="src.dir" value="src"/>
@@ -55,6 +55,10 @@
     </target>
     -->
 
+    <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+        <classpath path="${ant.home}/lib/jacocoant.jar"/>
+    </taskdef>
+
     <!--   ant test : run unit tests -->
     <target name="test" depends="build">
         <mkdir dir="${report.dir}"/>
@@ -65,7 +69,7 @@
                 <assertions><enable/></assertions>
                 <formatter type="xml"/>
                 <batchtest fork="yes" filtertrace="off" todir="${junit.dir}">
-                    <fileset dir="${build.dir}" includes="**/*TestedTest.class"/>
+                    <fileset dir="${build.dir}" includes="**/*Tester.class"/>
                 </batchtest>
                 <classpath refid="hamcrest.classpath"/>
                 <classpath path="${build.dir}"/>
@@ -76,10 +80,10 @@
     <!--   ant report : generate the JUnit and code coverage reports  -->
     <target name="report" depends="test">
         <junitreport todir="${junit.dir}">
-            <fileset dir="${junit.dir}" includes="TEST-*.xml"/>
+            <fileset dir="${junit.dir}" includes="**/*Tester.class"/>
             <report todir="${junit.dir}"/>
         </junitreport>
-
+<!--        Tester-*.xml-->
         <jacoco:report>
             <executiondata>
                 <file file="${jacoco.file}"/>

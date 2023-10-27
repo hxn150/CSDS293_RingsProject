@@ -3,7 +3,6 @@ package Rings;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BinaryOperator;
-import java.util.stream.Collectors;
 
 public final class Rings {
     public static <T> T reduce(List<T> args, T zero, BinaryOperator<T> accumulator) {
@@ -33,3 +32,5 @@ public final class Rings {
 //                .collect(Collectors.toList());
 //    }
 }
+
+
